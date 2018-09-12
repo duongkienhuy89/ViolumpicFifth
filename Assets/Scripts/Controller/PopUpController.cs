@@ -44,17 +44,7 @@ public class PopUpController : MonoBehaviour {
     public GameObject buyvip;
     public Advertise ad;
 
-    public GameObject MessVip;
-
-    public void ShowMessVip()
-    {
-
-        StartCoroutine(ieMoveDown(MessVip, showY));
-    }
-    public void HideMessVip()
-    {
-        StartCoroutine(ieMoveUp(MessVip, hideY));
-    }
+ 
 
     public void ShowAdTriger()
     {

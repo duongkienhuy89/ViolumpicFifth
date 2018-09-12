@@ -18,8 +18,16 @@ public class StopMonkey : MonoBehaviour {
 
     void btnContinute_OnClick()
     {
+		try
+		{
         PopUpController.instance.HideStopMonkey();
         PopUpController.instance.ShowStopGame();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

@@ -9,10 +9,18 @@ public class StartThongThai : MonoBehaviour {
 
     void onClick_btnPlay()
     {
+		try
+		{
         PopUpController.instance.HideStartThongThai();
         PopUpController.instance.ShowQuestionMonkey();
         SoundManager.Instance.PauseBGMusic();
         SoundManager.Instance.PlayAudioChoiTiep();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

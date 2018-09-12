@@ -18,8 +18,16 @@ public class StopSapXep : MonoBehaviour {
 
     void btnContinute_OnClick()
     {
+		try
+		{
         PopUpController.instance.HideStopSapXep();
         GameController.instance.ShowLevel2();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     // Use this for initialization

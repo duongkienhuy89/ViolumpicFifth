@@ -17,10 +17,18 @@ public class StartDinhNui : MonoBehaviour {
 
     void btnVaoThi_onClick()
     {
+		try
+		{
         PopUpController.instance.HideStartDinhNui();
         PopUpController.instance.ShowQuestionDinhNui();
         SoundManager.Instance.PauseBGMusic();
         SoundManager.Instance.PlayAudioChoiTiep();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

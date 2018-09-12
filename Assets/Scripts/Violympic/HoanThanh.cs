@@ -9,8 +9,16 @@ public class HoanThanh : MonoBehaviour {
 
     void onClick_btnContinute()
     {
+		try
+		{
         PopUpController.instance.HideHoanThanh();
         PopUpController.instance.ShowLevel();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

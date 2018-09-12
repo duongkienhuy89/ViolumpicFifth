@@ -1,17 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ShareRate  {
 
-    public static string titleShare = "Violympic fifth grade math";
-    public static string LinkShare = "https://play.google.com/store/apps/details?id=toan.violympic.fifth";
+    public static string titleShare = "Fifth grade math";
+    //public static string LinkShare = "https://play.google.com/store/apps/details?id=toan.violympic.fifth";
+    //public static string LinkAd = "https://play.google.com/store/apps/details?id=balo.game.applefruits";
+   // public static string LinkAd2 = "https://play.google.com/store/apps/details?id=balo.game.cocaro";
 
-    public static string LinkAd = "https://play.google.com/store/apps/details?id=balo.game.applefruits";
-    public static string LinkAd2 = "https://play.google.com/store/apps/details?id=balo.game.cocaro";
+	public static string LinkShare = "https://itunes.apple.com/us/app/math-fifth-fun-kids/id1231990223";
+	public static string LinkAd = "https://itunes.apple.com/us/app/violympic-toán-lớp-6/id1326617103";
+	public static string LinkAd2 = "https://itunes.apple.com/us/app/fishing-paracel-hook/id1099636581";
   
 
     public static void Share()
     {
+		#if UNITY_IPHONE
+		string facebookshare = "https://www.facebook.com/sharer/sharer.php?u=" + Uri.EscapeUriString(LinkShare);
+		Application.OpenURL(facebookshare);
+		#endif
         //execute the below lines if being run on a Android device
 #if UNITY_ANDROID
         //Refernece of AndroidJavaClass class for intent

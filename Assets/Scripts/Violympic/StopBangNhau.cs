@@ -18,9 +18,17 @@ public class StopBangNhau : MonoBehaviour {
 
     void btnContinute_OnClick()
     {
+		try
+		{
         PopUpController.instance.HideStopBangNhau();
        
             GameController.instance.ShowLevel2();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
       
     }
 

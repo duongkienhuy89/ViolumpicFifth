@@ -15,10 +15,18 @@ public class StartBangNhau : MonoBehaviour {
 
     void onClick_btnPlay()
     {
+		try
+		{
         PopUpController.instance.HideStartBangNhau();
         PopUpController.instance.ShowQuestionBangNhau();
         SoundManager.Instance.PauseBGMusic();
         SoundManager.Instance.PlayAudioChoiTiep();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

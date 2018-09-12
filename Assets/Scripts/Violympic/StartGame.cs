@@ -11,18 +11,34 @@ public class StartGame : MonoBehaviour {
 
     void onClick_Back()
     {
+		try
+		{
         PopUpController.instance.HideStartGame();
         PopUpController.instance.ShowLevel();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void onClick_VaoThi()
     {
+		try
+		{
          PopUpController.instance.HideStartGame();
        
         GameController.instance.ShowLevel1();
         GameController.instance.ckResetLv = false;
       
         SoundManager.Instance.PlayAudioChoiTiep();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
     public void setData()
     {

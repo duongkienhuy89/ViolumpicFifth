@@ -62,15 +62,23 @@ public class LvItem : MonoBehaviour {
 
     void btnItem_onClick()
     {
+		try
+		{
        
-        if ((GameController.instance.vuotqua + 1) >= giatri)
-        {
+          if ((GameController.instance.vuotqua + 1) >= giatri)
+          {
             GameController.instance.level = giatri;
             PopUpController.instance.HideLevel();
             PopUpController.instance.ShowStartGame();
             GameController.instance.ckResetLv = true;
             SoundManager.Instance.PlayAudioChoiTiep();
-        }
+           }
+		 }
+		  catch (System.Exception)
+			{
+
+				throw;
+			}
     }
 
 	// Use this for initialization

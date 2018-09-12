@@ -121,6 +121,8 @@ public class QuestionDN : MonoBehaviour {
     }
     void xulyPS(string dl, string da, tk2dTextMesh txt, tk2dUIItem bt)
     {
+		try
+		{
         if (dl.Contains("/"))
         {
             txt.gameObject.SetActive(false);
@@ -175,6 +177,13 @@ public class QuestionDN : MonoBehaviour {
             txt.text = da + "." + dl;
 
         }
+
+	}
+	catch (System.Exception)
+	{
+
+		throw;
+	}
     }
 
     public void doSubGet(ref List<DinhNui> lst)

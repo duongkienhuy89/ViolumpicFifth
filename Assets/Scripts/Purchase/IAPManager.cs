@@ -148,6 +148,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
             {
                 // The first phase of restoration. If no more responses are received on ProcessPurchase then 
                 // no purchases are available to be restored.
+					DataManager.SaveVip(0);
+					GameController.instance.checkvip = 0;
+					PopUpController.instance.ShowBuyItem();
                 Debug.Log("RestorePurchases continuing: " + result + ". If no further messages, no purchases available to restore.");
             });
         }

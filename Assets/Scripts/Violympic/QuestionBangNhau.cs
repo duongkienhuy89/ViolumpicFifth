@@ -85,6 +85,8 @@ public class QuestionBangNhau : MonoBehaviour {
 
     void doXuLy(SpItem bt)
     {
+		try
+		{
       
         if (currentState == State.InGame1)
         {
@@ -117,6 +119,12 @@ public class QuestionBangNhau : MonoBehaviour {
                 StartCoroutine(WaitTimeXuLyBN(1f, bt));
             }
         }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
            
     }
 

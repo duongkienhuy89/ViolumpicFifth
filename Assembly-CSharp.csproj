@@ -57,7 +57,6 @@
      <Compile Include="Assets\GoogleMobileAds\Api\InterstitialAd.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\Mediation\MediationExtras.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\MobileAds.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Api\NativeExpressAdView.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\Reward.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\RewardBasedVideoAd.cs" />
      <Compile Include="Assets\GoogleMobileAds\Common\DummyClient.cs" />
@@ -66,7 +65,6 @@
      <Compile Include="Assets\GoogleMobileAds\Common\ICustomNativeTemplateClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Common\IInterstitialClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Common\IMobileAdsClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Common\INativeExpressAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Common\IRewardBasedVideoAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Common\Utils.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\Android\AdLoaderClient.cs" />
@@ -74,7 +72,6 @@
      <Compile Include="Assets\GoogleMobileAds\Platforms\Android\CustomNativeTemplateClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\Android\InterstitialClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\Android\MobileAdsClient.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\Android\NativeExpressAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\Android\RewardBasedVideoAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\Android\Utils.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\GoogleMobileAdsClientFactory.cs" />
@@ -85,7 +82,6 @@
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\InterstitialClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MobileAdsClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
-     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\NativeExpressAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
      <Compile Include="Assets\Scripts\Cls\ClsLanguage.cs" />
@@ -110,7 +106,6 @@
      <Compile Include="Assets\Scripts\Purchase\BuyItem.cs" />
      <Compile Include="Assets\Scripts\Purchase\IAPManager.cs" />
      <Compile Include="Assets\Scripts\Violympic\HoanThanh.cs" />
-     <Compile Include="Assets\Scripts\Violympic\MessVip.cs" />
      <Compile Include="Assets\Scripts\Violympic\QuestionBangNhau.cs" />
      <Compile Include="Assets\Scripts\Violympic\QuestionDN.cs" />
      <Compile Include="Assets\Scripts\Violympic\QuestionMonkey.cs" />
@@ -218,11 +213,10 @@
      <Compile Include="Assets\UnityLitJson\ParserToken.cs" />
      <Compile Include="Assets\UnityLitJson\Platform.cs" />
      <Compile Include="Assets\UnityLitJson\Unity\UnityTypeBindings.cs" />
+     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.64.0.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitSolidVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d\Goodies\TexturePacker\Exporter\2dtoolkit\exporter.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\SolidVertexColor.shader" />
-     <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
-     <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
      <None Include="Assets\TK2DROOT\tk2dUI\Shaders\DepthMask.shader" />
      <None Include="Assets\Resources\violympic.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitPremulVertexColor.shader" />
@@ -237,7 +231,6 @@
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitCutoutVertexColor.shader" />
      <None Include="Assets\Resources\violympicv.txt" />
      <None Include="Assets\Resources\violympica.txt" />
-     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.35.0.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Editor\EditorUtility.shader" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\CutoutVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\demobmfont\test.fnt" />
@@ -246,6 +239,7 @@
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitBlendVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito16.fnt" />
      <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito32.fnt" />
+     <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\AdditiveVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\democameradata\source\democamerafont.fnt" />
  <Reference Include="UnityEngine.UI">
@@ -261,25 +255,25 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="Common">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Common.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Common.dll</HintPath>
  </Reference>
  <Reference Include="Editor">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
  </Reference>
  <Reference Include="Security">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Security.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Security.dll</HintPath>
  </Reference>
  <Reference Include="Stores">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
  </Reference>
  <Reference Include="Apple">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
  </Reference>
  <Reference Include="Tizen">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Tizen/Tizen.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/Bin/Tizen/Tizen.dll</HintPath>
  </Reference>
  <Reference Include="winrt">
- <HintPath>D:/vtc/ViolumpicFifth/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
+ <HintPath>E:/CKH/UnityProject/ViolumpicFifth/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

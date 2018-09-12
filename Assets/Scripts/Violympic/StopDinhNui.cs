@@ -43,7 +43,8 @@ public class StopDinhNui : MonoBehaviour {
 
     void onClick_btnContinute()
     {
-
+		try
+		{
         PopUpController.instance.HideStopDinhNui();
      
             GameController.instance.ShowLevel3();
@@ -51,6 +52,12 @@ public class StopDinhNui : MonoBehaviour {
             {
                 bannerView.Hide();
             }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     
     }
 

@@ -10,10 +10,18 @@ public class StartSapXep : MonoBehaviour {
 
     void btnPlay_OnClick()
     {
+		try
+		{
         SoundManager.Instance.PauseBGMusic();
         PopUpController.instance.HideStartSapXep();
         PopUpController.instance.ShowQuestionSapXep();
         SoundManager.Instance.PlayAudioChoiTiep();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

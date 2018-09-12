@@ -17,6 +17,8 @@ public class StopGame : MonoBehaviour {
 
     void onClick_Continute()
     {
+		try
+		{
         if (GameController.instance.checkvip != 10)
         {
             ShowAdsInterstitial();
@@ -33,6 +35,12 @@ public class StopGame : MonoBehaviour {
         }
         GameController.instance.sumCoin = 0;
         GameController.instance.sumTime = 0;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 
