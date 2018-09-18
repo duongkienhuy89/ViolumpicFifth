@@ -29,6 +29,8 @@ public class StopDinhNui : MonoBehaviour {
     
     public void setData(int pCoin, string pTime)
     {
+		try
+		{
         SoundManager.Instance.rePlayBGMusic();
         if (GameController.instance.checkvip != 10)
         {
@@ -39,6 +41,12 @@ public class StopDinhNui : MonoBehaviour {
         //nativeExpressAdView.Show();
         txtCoin.text = ClsLanguage.doDiem()+": " + pCoin;
         txtTime.text = ClsLanguage.doTime()+": " + pTime;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void onClick_btnContinute()
@@ -63,11 +71,19 @@ public class StopDinhNui : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnContinute.OnClick += onClick_btnContinute;
 
         txtHoanThanh.text = ClsLanguage.doHoanThanhBaiThi();
         txtDinhNui.text = ClsLanguage.doTitleDinhNui();
         btnContinute.gameObject.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = ClsLanguage.doContinute();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
         
 	}
 	

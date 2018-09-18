@@ -27,12 +27,19 @@ public class StartSapXep : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+		try
+		{
         btnPlay.OnClick += btnPlay_OnClick;
 
         txtTitle.text = ClsLanguage.doTileSapXep();
         txtContent.text = ClsLanguage.doSapXep();
         btnPlay.gameObject.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = ClsLanguage.doVaoThi();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 	

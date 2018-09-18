@@ -33,10 +33,18 @@ public class StartDinhNui : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnVaoThi.OnClick += btnVaoThi_onClick;
         txtTitle.text = ClsLanguage.doTitleDinhNui();
         
         txtStart.text = ClsLanguage.doStart();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

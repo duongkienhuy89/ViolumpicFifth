@@ -358,6 +358,8 @@ public class QuestionSapXep : MonoBehaviour
 
     void GameOver()
     {
+		try
+		{
         currentState = State.Start;
         PopUpController.instance.HideQuestionSapXep();
         if (mDiemB1 < 0)
@@ -368,6 +370,12 @@ public class QuestionSapXep : MonoBehaviour
         GameController.instance.sumTime += mTime;
         PopUpController.instance.ShowStopSapXep(mDiemB1, ClsThaoTac.CoverTimeToString(1200 - mTime));
         resetTL();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
     public void resetTL()
     {

@@ -36,6 +36,8 @@ public class GameController : MonoBehaviour {
 
     void Awake()
     {
+		try
+		{
         Application.targetFrameRate = 30;
         QualitySettings.vSyncCount = -1;
     
@@ -44,6 +46,12 @@ public class GameController : MonoBehaviour {
         vuotqua = DataManager.GetHightLevel();
         level = vuotqua + 1;
         checkvip = DataManager.GetVip();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
     }
 
@@ -139,7 +147,8 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+		try
+		{
         stSumcoin = DataManager.GetHightStringCoin();
         mang = stSumcoin.Split('+');
 
@@ -160,6 +169,12 @@ public class GameController : MonoBehaviour {
 
         PopUpController.instance.HideLevel();
         StartCoroutine(WaitTimeLoadData(3f));
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
       
     
 	}

@@ -10,24 +10,46 @@ public class BuyItem : MonoBehaviour {
 
     void btnCancel_OnClick()
     {
-        
+		try
+		{
         PopUpController.instance.HideBuyItem();
         PopUpController.instance.ShowMainGame();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void btnBuy_OnClick()
     {
-        
+		try
+		{
         IAPManager.instance.BuyVipLevel();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization
 	void Start () {
 
+		try
+		{
         btnCancel.OnClick += btnCancel_OnClick;
         btnBuy.OnClick += btnBuy_OnClick;
         txtTitle.text = ClsLanguage.doActiVip();
         txtContent.text = ClsLanguage.doContenVip();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     
 
 	}

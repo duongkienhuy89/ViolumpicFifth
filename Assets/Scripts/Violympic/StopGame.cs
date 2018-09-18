@@ -73,6 +73,8 @@ public class StopGame : MonoBehaviour {
 
     public void setData()
     {
+		try
+		{
         LoadAdsInterstitial();
 
         if (GameController.instance.sumCoin < 150)
@@ -142,16 +144,30 @@ public class StopGame : MonoBehaviour {
             GameController.instance.level++;
         }
         txtTongDiem.text = ClsLanguage.doTongDiem() + GameController.instance.sumCoin + "/300";
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
        
     }
 
 	// Use this for initialization
 	void Start () {
 
+		try
+		{
         btnContinute.OnClick += onClick_Continute;
         btnContinute.gameObject.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = ClsLanguage.doContinute();
         txtTitle.text = ClsLanguage.doTongKet();
         LoadAdsInterstitial();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
        
 	}

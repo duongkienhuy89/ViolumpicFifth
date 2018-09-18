@@ -48,11 +48,19 @@ public class StartGame : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnVaoThi.OnClick += onClick_VaoThi;
         btnBack.OnClick += onClick_Back;
         
         txtContent.text = ClsLanguage.doContentBatDau();
         txtPlay.text = ClsLanguage.doVaoThi();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

@@ -154,7 +154,8 @@ public class QuestionMonkey : MonoBehaviour
 
     public void Create()
     {
-
+		try
+		{
 
         float positionX = startX;
 
@@ -181,6 +182,12 @@ public class QuestionMonkey : MonoBehaviour
         }
         XuatDaTa();
         txtLoading.gameObject.SetActive(false);
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void chonData(ref List<PhepToan> tmg1, ref List<PhepToan> tmg2, List<PhepToan> lstTam, int loai)

@@ -10,7 +10,15 @@ public class StartBangNhau : MonoBehaviour {
 
     public void setData(int lesson)
     {
+		try
+		{
         txtContent.text = ClsLanguage.doLesson() + lesson + ":" + ClsLanguage.doContentCapBangNhau();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void onClick_btnPlay()
@@ -31,11 +39,19 @@ public class StartBangNhau : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnPlay.OnClick += onClick_btnPlay;
 
         txtTitle.text = ClsLanguage.doTitleCapBangNhau();
     
         btnPlay.gameObject.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = ClsLanguage.doStart();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

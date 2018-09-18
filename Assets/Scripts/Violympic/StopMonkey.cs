@@ -32,6 +32,8 @@ public class StopMonkey : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnContinute.OnClick += btnContinute_OnClick;
         if (GameController.instance.tienganh)
         {
@@ -43,6 +45,12 @@ public class StopMonkey : MonoBehaviour {
         }
         txtHoanThanh.text = ClsLanguage.doHoanThanhBaiThi();
         btnContinute.gameObject.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = ClsLanguage.doContinute();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

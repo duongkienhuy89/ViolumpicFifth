@@ -25,6 +25,8 @@ public class StartThongThai : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnPlay.OnClick += onClick_btnPlay;
         if (GameController.instance.tienganh)
         {
@@ -36,6 +38,12 @@ public class StartThongThai : MonoBehaviour {
         }
         btnPlay.gameObject.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = ClsLanguage.doVaoThi();
         txtContent.text = ClsLanguage.doContentMoney();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
        
 	}
 	

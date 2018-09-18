@@ -27,8 +27,16 @@ public class LevelController : MonoBehaviour {
     public tk2dUIItem btnBack;
     void onClick_Back()
     {
+		try
+		{
         PopUpController.instance.HideLevel();
         PopUpController.instance.ShowMainGame();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     public void resetData()
@@ -90,7 +98,15 @@ public class LevelController : MonoBehaviour {
 
     void Awake()
     {
+		try
+		{
         Createlevl(20);
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

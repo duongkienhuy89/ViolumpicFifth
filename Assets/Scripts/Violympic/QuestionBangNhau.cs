@@ -251,6 +251,8 @@ public class QuestionBangNhau : MonoBehaviour {
 
     public void GameOver()
     {
+		try
+		{
         currentState = State.Start;
         PopUpController.instance.HideQuestionBangNhau();
         if (mDiemB1 < 0)
@@ -261,6 +263,12 @@ public class QuestionBangNhau : MonoBehaviour {
         GameController.instance.sumTime += mTime;
         PopUpController.instance.ShowStopBangNhau(mDiemB1, ClsThaoTac.CoverTimeToString(1200 - mTime));
         resetTL();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
     public void resetTL()
     {
